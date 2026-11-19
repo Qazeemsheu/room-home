@@ -1,0 +1,182 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container {
+    width: 100%;
+    min-height: 100vh;
+}
+#fsection {
+    width: 100%;
+    min-height: 65vh;
+    display: flex;
+}
+
+#headerSection {
+    width: 60%;
+    min-height: 70vh;
+    background-image: url("images/desktop-image-hero-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header {
+    display: flex;
+    align-items: start;
+    gap: 50px;
+    padding: 40px;
+}
+header > nav {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+header > nav li {
+    list-style-type: none;
+    text-transform: lowercase;
+    color: hsl(0, 100%, 100%);
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition:  all 1s;
+    &:hover {
+        border-bottom: 2px solid hsl(0, 100%, 100%);
+    }
+}
+#content {
+    width: 40%;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#content  > div {
+    width: 100%;
+}
+#content  > div > nav {
+    width: 60%;
+    margin: 60px auto 0px auto;
+}
+#content  > div > nav h2 {
+    color: hsl(0, 0%, 0%);
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+#content > div > nav p {
+    font-size: 12px;
+    line-height: 20px;
+    color: hsl(0, 0%, 63%);
+    margin-bottom: 20px;
+}
+span {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover {
+        color: hsl(0, 0%, 63%);
+    }
+}
+#content aside {
+    display: flex;
+}
+#content aside button {
+    padding: 20px 30px;
+    background-color: hsl(0, 0%, 0%);
+    border: none;
+    cursor: pointer;
+    &:hover {
+        background-color: hsl(0, 0%, 63%);
+        transition: 1s;
+    }
+}
+
+#ssection {
+    width: 100%;
+    min-height: 35vh;
+    display: flex;
+}
+#ssection img {
+    width: 30%;
+}
+#ssection > div {
+    width: 40%;
+    padding: 50px;
+}
+
+#ssection > div > h4 {
+    text-transform: uppercase;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+#ssection > div p {
+    font-size: 12px;
+    line-height: 20px;
+    color: hsl(0, 0%, 63%);
+}
+#icon-hamburger{
+    display: none;
+}
+summary {
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    header nav {
+        display: none;
+    }
+    #icon-hamburger {
+        display: inline-block;
+    }
+    #fsection {
+        flex-direction: column;
+    }
+    #headerSection,#content{
+        width: 100%;
+    }
+    #content {
+        min-height: 25vh;
+    }
+    #content  > div > nav{
+        width: 90%;
+        margin: 20px auto;
+    }
+    #ssection {
+        flex-direction: column;
+    }
+    #ssection img {
+        width: 100%;
+    }
+    #ssection div {
+        width: 100%;
+        padding: 20px;
+    }
+    summary {
+        width: 100%;
+        min-height: 15vh;
+        background-color: white;
+        display: none;
+        position: fixed;
+        top: 0;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+    summary div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    summary div li {
+        list-style-type: none;
+        text-transform: lowercase;
+        font-weight: bold;
+    }
+}
